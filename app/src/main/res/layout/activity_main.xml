@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3">
+        android:layout_weight="2">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -48,11 +48,11 @@
                         android:background="@drawable/rounded_edit_text"
                         android:hint="   Ingrese su correo"
                         android:textColorHint="@color/black"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         android:layout_width="250dp"
                         android:layout_height="70dp"
                         android:layout_centerInParent="true"
-                        android:inputType="text"></EditText>
+                        android:inputType="textEmailAddress"></EditText>
                 </RelativeLayout>
         </LinearLayout>
 
@@ -69,11 +69,11 @@
                     android:background="@drawable/rounded_edit_text"
                     android:hint="   Ingrese su clave"
                     android:textColorHint="@color/black"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:layout_width="250dp"
                     android:layout_height="70dp"
                     android:layout_centerInParent="true"
-                    android:inputType="text"></EditText>
+                    android:inputType="textPassword"></EditText>
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
