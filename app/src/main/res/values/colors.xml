@@ -3,4 +3,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="celeste">#00B8D4</color>
+    <color name="celeste_edit">#3ABAA7</color>
 </resources>
