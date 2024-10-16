@@ -9,6 +9,8 @@
     tools:context=".MenuProvicional"
     android:orientation="vertical">
 
+    <!-- la logica esta la seguiran el resto de menus y funciones aun no creadas, a excepcion de splash y main activity-->
+    <!-- boton para enviar al menu de apoderado-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,7 +28,7 @@
             </Button>
         </RelativeLayout>
     </LinearLayout>
-
+    <!-- boton para enviar al menu de alumno-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,7 +46,7 @@
             </Button>
         </RelativeLayout>
     </LinearLayout>
-
+    <!-- boton para enviar a administrador -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -62,7 +64,7 @@
             </Button>
         </RelativeLayout>
     </LinearLayout>
-
+    <!-- boton para enviar al profesor-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

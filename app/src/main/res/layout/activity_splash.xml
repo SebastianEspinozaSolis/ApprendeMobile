@@ -8,16 +8,20 @@
     android:layout_height="match_parent"
     tools:context=".Splash"
     android:orientation="vertical">
+
+    <!-- Para dejar un espacio en blanco y no se vea tan pegado a lo superior de la pantalla-->
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="3"></LinearLayout>
 
+    <!-- linear que contiene la imagen y el nombre-->
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
     android:orientation="vertical">
+    <!-- Imagen  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,10 +34,10 @@
                 android:layout_height="200dp"
                 android:src="@drawable/logo"
                 android:layout_centerInParent="true">
-
             </ImageView>
         </RelativeLayout>
     </LinearLayout>
+    <!-- Nombre de la app -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,7 +56,7 @@
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
-
+    <!-- Version de la app -->
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"

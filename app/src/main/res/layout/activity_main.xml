@@ -9,6 +9,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <!-- Boton iniciar sesion -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,12 +30,15 @@
     </LinearLayout>
 
 
+    <!-- Edit text para usuario y clave -->
+    <!-- ambos usan rounded_edit_text que es para que el fondo de edit text sea celeste y redondeado -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
         android:orientation="vertical">
 
+        <!-- Correo  -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -55,7 +59,7 @@
                         android:inputType="textEmailAddress"></EditText>
                 </RelativeLayout>
         </LinearLayout>
-
+        <!-- Edit de clave -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -78,6 +82,7 @@
         </LinearLayout>
     </LinearLayout>
 
+    <!-- Logo de app -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -26,30 +26,40 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        // se declaran los edits para sacar los valores que tiene y el boton para cuando se interactua con el
         EditText editUsuario = (EditText) findViewById(R.id.editUsuario);
         EditText editClave = (EditText) findViewById(R.id.editClave);
         Button botonIniciar = (Button) findViewById(R.id.botonIniciar);
 
+        // esto son las credenciales que tenia, pero luego cuando se conecte a la base de datos se desapareceran
         String usuarioAdmin = "usuario@gmail.com";
         String claveAdmin = "Password1";
 
+        // al tocar el boton iniciar
         botonIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // comprobara si hay conexion
                 if(hayConexion(MainActivity.this)){
+
+                    // si hay conexion, guardara los valores de los edits como usuario y clave capturada
                     String usuarioCapturado = editUsuario.getText().toString();
                     String claveCapturada = editClave.getText().toString();
 
+                    // comparara si estos son iguales a las credenciales que por ahora son las de arriba
                     if (usuarioCapturado.equalsIgnoreCase(usuarioAdmin) && claveCapturada.equalsIgnoreCase(claveAdmin)){
+                        // Si son iguales, aunque no considera mayusculas de minusculas, envia al menu provicional y elimina esta activity de iniciar sesion
                         startActivity(new Intent(MainActivity.this,MenuProvicional.class));
                         finish();
                     }else {
+                        // si no coinciden le dice al usuario que las credenciales son invalidas
                         Toast.makeText(MainActivity.this, "Credenciales Invalidas", Toast.LENGTH_SHORT).show();
                     }
+                    // si son invalidas continua y los edits text les cambia el texto a sin nada para ingresar de nuevo todo
                     editUsuario.setText("");
                     editClave.setText("");
                 }else{
-                    //Toast.makeText(Splash.this, "Sin conexion", Toast.LENGTH_SHORT).show();
+                    // en el caso que no haya conexion al tocar el boton iniciar lo dira en el alert
                     // Este es el alert
                     AlertDialog.Builder miAlert = new AlertDialog.Builder(MainActivity.this);
                     miAlert.setTitle("No hay acceso a internet");
@@ -68,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    // aqui esta nuevamente la funcion para ver si hay conexion o no
     public boolean hayConexion(Context context){
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(context.CONNECTIVITY_SERVICE);
         NetworkInfo netinfo = cm.getActiveNetworkInfo();

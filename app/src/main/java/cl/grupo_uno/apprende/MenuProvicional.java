@@ -19,6 +19,9 @@ public class MenuProvicional extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_menu_provicional);
 
+        // igualmente aqui, esta logica sera igual para el resto de menu y funciones a excepcion de splash y main activity
+        // la logica de aqui es declarar los botones a partir del id
+        // luego al ser clickeados envian a su menu correspondiente
         Button botonApoderado = (Button) findViewById(R.id.botonMenuApoderado);
         Button botonAlumno = (Button) findViewById(R.id.botonMenuAlumno);
         Button botonAdministrador = (Button) findViewById(R.id.botonMenuAdministrador);
