@@ -1,0 +1,39 @@
+package cl.grupo_uno.apprende;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class MenuProfesor extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_menu_profesor);
+
+        Button botonAsistencia = (Button) findViewById(R.id.botonAsistencia);
+        Button botonNotas = (Button) findViewById(R.id.botonNotas);
+
+        botonNotas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuProfesor.this, Notas.class));
+            }
+        });
+
+        botonAsistencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuProfesor.this, Asistencia.class));
+            }
+        });
+    }
+}

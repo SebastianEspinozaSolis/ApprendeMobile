@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuProvicional"
+    tools:context=".MenuAdministrador"
     android:orientation="vertical">
 
     <LinearLayout
@@ -17,12 +17,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <Button
-                android:id="@+id/botonMenuApoderado"
+                android:id="@+id/botonIngresarDatos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Apoderado"
+                android:text="Ingresar datos de alumnos"
                 android:textSize="40sp"
-                android:layout_centerInParent="true">
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/celeste">
             </Button>
         </RelativeLayout>
     </LinearLayout>
@@ -35,12 +36,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <Button
-                android:id="@+id/botonMenuAlumno"
+                android:id="@+id/botonAviso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alumno"
-                android:textSize="40sp"
-                android:layout_centerInParent="true">
+                android:text="Avisos"
+                android:textSize="50sp"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/celeste">
             </Button>
         </RelativeLayout>
     </LinearLayout>
@@ -53,32 +55,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <Button
-                android:id="@+id/botonMenuAdministrador"
+                android:id="@+id/botonCrearUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Administrador"
+                android:text="Crear nuevos usuarios"
                 android:textSize="40sp"
-                android:layout_centerInParent="true">
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/celeste">
             </Button>
         </RelativeLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Button
-                android:id="@+id/botonMenuProfesor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Profesor"
-                android:textSize="40sp"
-                android:layout_centerInParent="true">
-            </Button>
-        </RelativeLayout>
-    </LinearLayout>
+
 
 </LinearLayout>

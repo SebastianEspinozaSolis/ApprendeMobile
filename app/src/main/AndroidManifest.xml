@@ -17,6 +17,42 @@
         android:theme="@style/Theme.Apprende"
         tools:targetApi="31">
         <activity
+            android:name=".Asistencia"
+            android:exported="false" />
+        <activity
+            android:name=".Notas"
+            android:exported="false" />
+        <activity
+            android:name=".VerAvisos"
+            android:exported="false" />
+        <activity
+            android:name=".VerPupilos"
+            android:exported="false" />
+        <activity
+            android:name=".Pomodoro"
+            android:exported="false" />
+        <activity
+            android:name=".CrearUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarDatos"
+            android:exported="false" />
+        <activity
+            android:name=".CrearAvisos"
+            android:exported="false" />
+        <activity
+            android:name=".MenuProfesor"
+            android:exported="false" />
+        <activity
+            android:name=".MenuAlumno"
+            android:exported="false" />
+        <activity
+            android:name=".MenuAdministrador"
+            android:exported="false" />
+        <activity
+            android:name=".MenuApoderado"
+            android:exported="false" />
+        <activity
             android:name=".MenuProvicional"
             android:exported="false" />
         <activity
@@ -30,7 +66,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
