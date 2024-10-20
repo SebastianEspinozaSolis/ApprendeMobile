@@ -53,9 +53,6 @@
             android:name=".MenuApoderado"
             android:exported="false" />
         <activity
-            android:name=".MenuProvicional"
-            android:exported="false" />
-        <activity
             android:name=".Splash"
             android:exported="true">
             <intent-filter>

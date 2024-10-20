@@ -7,8 +7,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -19,7 +22,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-
+    private String rolSeleccionado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +33,34 @@ public class MainActivity extends AppCompatActivity {
         EditText editUsuario = (EditText) findViewById(R.id.editUsuario);
         EditText editClave = (EditText) findViewById(R.id.editClave);
         Button botonIniciar = (Button) findViewById(R.id.botonIniciar);
+        Spinner spinner = (Spinner) findViewById(R.id.spinnerRoles);
+        String [] roles = getResources().getStringArray(R.array.roles);
 
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,roles);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                rolSeleccionado = parent.getItemAtPosition(position).toString();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
         // esto son las credenciales que tenia, pero luego cuando se conecte a la base de datos se desapareceran
         String usuarioAdmin = "usuario@gmail.com";
-        String claveAdmin = "Password1";
+        String claveAdmin = "administrador";
+
+        String usuarioApoderado = "usuario@gmail.com";
+        String claveAapoderado = "apoderado";
+
+        String usuarioAlumno = "usuario@gmail.com";
+        String claveAlumno = "alumno";
+
+        String usuarioProfesor = "usuario@gmail.com";
+        String claveProfesor = "profesor";
 
         // al tocar el boton iniciar
         botonIniciar.setOnClickListener(new View.OnClickListener() {
@@ -46,18 +73,63 @@ public class MainActivity extends AppCompatActivity {
                     String usuarioCapturado = editUsuario.getText().toString();
                     String claveCapturada = editClave.getText().toString();
 
-                    // comparara si estos son iguales a las credenciales que por ahora son las de arriba
-                    if (usuarioCapturado.equalsIgnoreCase(usuarioAdmin) && claveCapturada.equalsIgnoreCase(claveAdmin)){
-                        // Si son iguales, aunque no considera mayusculas de minusculas, envia al menu provicional y elimina esta activity de iniciar sesion
-                        startActivity(new Intent(MainActivity.this,MenuProvicional.class));
-                        finish();
-                    }else {
-                        // si no coinciden le dice al usuario que las credenciales son invalidas
-                        Toast.makeText(MainActivity.this, "Credenciales Invalidas", Toast.LENGTH_SHORT).show();
+                    switch (rolSeleccionado){
+                        case "Apoderado":
+                            // comparara si estos son iguales a las credenciales que por ahora son las de arriba
+                            if (usuarioCapturado.equalsIgnoreCase(usuarioApoderado) && claveCapturada.equalsIgnoreCase(claveAapoderado)){
+                                // Si son iguales, aunque no considera mayusculas de minusculas, envia al menu provicional y elimina esta activity de iniciar sesion
+                                startActivity(new Intent(MainActivity.this,MenuApoderado.class));
+                                finish();
+                            }else {
+                                // si no coinciden le dice al usuario que las credenciales son invalidas
+                                Toast.makeText(MainActivity.this, "Credenciales Invalidas", Toast.LENGTH_SHORT).show();
+                            }
+                            // si son invalidas continua y los edits text les cambia el texto a sin nada para ingresar de nuevo todo
+                            editUsuario.setText("");
+                            editClave.setText("");
+                            break;
+                        case "Alumno":
+                            // comparara si estos son iguales a las credenciales que por ahora son las de arriba
+                            if (usuarioCapturado.equalsIgnoreCase(usuarioAlumno) && claveCapturada.equalsIgnoreCase(claveAlumno)){
+                                // Si son iguales, aunque no considera mayusculas de minusculas, envia al menu provicional y elimina esta activity de iniciar sesion
+                                startActivity(new Intent(MainActivity.this,MenuAlumno.class));
+                                finish();
+                            }else {
+                                // si no coinciden le dice al usuario que las credenciales son invalidas
+                                Toast.makeText(MainActivity.this, "Credenciales Invalidas", Toast.LENGTH_SHORT).show();
+                            }
+                            // si son invalidas continua y los edits text les cambia el texto a sin nada para ingresar de nuevo todo
+                            editUsuario.setText("");
+                            editClave.setText("");
+                        case "Administrador":
+                            // comparara si estos son iguales a las credenciales que por ahora son las de arriba
+                            if (usuarioCapturado.equalsIgnoreCase(usuarioAdmin) && claveCapturada.equalsIgnoreCase(claveAdmin)){
+                                // Si son iguales, aunque no considera mayusculas de minusculas, envia al menu provicional y elimina esta activity de iniciar sesion
+                                startActivity(new Intent(MainActivity.this,MenuAdministrador.class));
+                                finish();
+                            }else {
+                                // si no coinciden le dice al usuario que las credenciales son invalidas
+                                Toast.makeText(MainActivity.this, "Credenciales Invalidas", Toast.LENGTH_SHORT).show();
+                            }
+                            // si son invalidas continua y los edits text les cambia el texto a sin nada para ingresar de nuevo todo
+                            editUsuario.setText("");
+                            editClave.setText("");
+                            break;
+                        case "Profesor":
+                            // comparara si estos son iguales a las credenciales que por ahora son las de arriba
+                            if (usuarioCapturado.equalsIgnoreCase(usuarioProfesor) && claveCapturada.equalsIgnoreCase(claveProfesor)){
+                                // Si son iguales, aunque no considera mayusculas de minusculas, envia al menu provicional y elimina esta activity de iniciar sesion
+                                startActivity(new Intent(MainActivity.this,MenuProfesor.class));
+                                finish();
+                            }else {
+                                // si no coinciden le dice al usuario que las credenciales son invalidas
+                                Toast.makeText(MainActivity.this, "Credenciales Invalidas", Toast.LENGTH_SHORT).show();
+                            }
+                            // si son invalidas continua y los edits text les cambia el texto a sin nada para ingresar de nuevo todo
+                            editUsuario.setText("");
+                            editClave.setText("");
+                            break;
                     }
-                    // si son invalidas continua y los edits text les cambia el texto a sin nada para ingresar de nuevo todo
-                    editUsuario.setText("");
-                    editClave.setText("");
                 }else{
                     // en el caso que no haya conexion al tocar el boton iniciar lo dira en el alert
                     // Este es el alert

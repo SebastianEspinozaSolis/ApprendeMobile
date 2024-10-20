@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Apprende</string>
+
+    <string-array name="roles">
+        <item>Apoderado</item>
+        <item>Administrador</item>
+        <item>Profesor</item>
+        <item>Alumno</item>
+    </string-array>
 </resources>
