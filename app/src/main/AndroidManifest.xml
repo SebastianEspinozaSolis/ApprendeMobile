@@ -17,6 +17,21 @@
         android:theme="@style/Theme.Apprende"
         tools:targetApi="31">
         <activity
+            android:name=".CrearAlumno1"
+            android:exported="false" />
+        <activity
+            android:name=".CrearApoderado2"
+            android:exported="false" />
+        <activity
+            android:name=".CrearAdministrador"
+            android:exported="false" />
+        <activity
+            android:name=".CrearProfesor"
+            android:exported="false" />
+        <activity
+            android:name=".CrearApoderado1"
+            android:exported="false" />
+        <activity
             android:name=".Asistencia"
             android:exported="false" />
         <activity

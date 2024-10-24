@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearAlumno1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Ingreso de datos del alumno 1 de 3"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/editNombreAlumno"
+                    android:hint="Ingrese el nombre"
+                    android:textColorHint="@color/black"
+                    android:textSize="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="text"></EditText>
+                <EditText
+                    android:id="@+id/editRutAlumno"
+                    android:hint="Ingrese el rut"
+                    android:textColorHint="@color/black"
+                    android:textSize="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="text"></EditText>
+                <EditText
+                    android:id="@+id/editFechaNacAlumno"
+                    android:hint="Ingrese fecha de nacimiento"
+                    android:textColorHint="@color/black"
+                    android:textSize="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="date"></EditText>
+                <EditText
+                    android:id="@+id/editSexoAlumno"
+                    android:hint="Ingrese el sexo"
+                    android:textColorHint="@color/black"
+                    android:textSize="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="text"></EditText>
+                <EditText
+                    android:id="@+id/editCorreoAlumno"
+                    android:hint="Ingrese el correo"
+                    android:textColorHint="@color/black"
+                    android:textSize="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textEmailAddress"></EditText>
+                <EditText
+                    android:id="@+id/editContraseñaAlumno"
+                    android:hint="Ingrese la contraseña"
+                    android:textColorHint="@color/black"
+                    android:textSize="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="text"></EditText>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/botonSiguienteAlumno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Siguiente"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:backgroundTint="@color/celeste"></Button>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
