@@ -1,5 +1,6 @@
 package cl.grupo_uno.apprende;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,10 @@ public class CrearAlumno1 extends AppCompatActivity {
                     String correoCapt = correo.getText().toString();
                     String contraseñaCapt = contraseña.getText().toString();
                     String sexoCapt = sexo.getText().toString();
+
+                    Intent i = new Intent(CrearAlumno1.this, CrearAlumno2.class);
+                    i.putExtra("nombre",nombreCapt);
+                    startActivity(i);
                 }
             }
         });
