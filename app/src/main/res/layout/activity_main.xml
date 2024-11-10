@@ -9,7 +9,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <!-- Boton iniciar sesion -->
+    <!-- Logo de app -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,15 +17,11 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <Button
-                android:id="@+id/botonIniciar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="Iniciar Sesion"
-                android:textColor="@color/black"
-                android:textSize="40sp"
-                android:backgroundTint="@color/celeste"></Button>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/logo"
+                android:layout_centerInParent="true"></ImageView>
         </RelativeLayout>
     </LinearLayout>
 
@@ -50,8 +46,9 @@
                     <EditText
                         android:id="@+id/editUsuario"
                         android:background="@drawable/rounded_edit_text"
-                        android:hint="   Ingrese su correo"
-                        android:textColorHint="@color/black"
+                        android:hint="      Ingrese su correo"
+                        android:textColorHint="@color/white"
+                        android:textStyle="bold"
                         android:textSize="20sp"
                         android:layout_width="250dp"
                         android:layout_height="70dp"
@@ -71,18 +68,21 @@
                 <EditText
                     android:id="@+id/editClave"
                     android:background="@drawable/rounded_edit_text"
-                    android:hint="   Ingrese su clave"
-                    android:textColorHint="@color/black"
+                    android:hint="      Ingrese su clave"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
                     android:textSize="20sp"
                     android:layout_width="250dp"
                     android:layout_height="70dp"
                     android:layout_centerInParent="true"
                     android:inputType="textPassword"></EditText>
+
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Logo de app -->
+
+    <!-- Boton iniciar sesion -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -90,11 +90,17 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/logo"
-                android:layout_centerInParent="true"></ImageView>
+            <Button
+                android:id="@+id/botonIniciar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Iniciar Sesion"
+                android:textColorHint="@color/white"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:backgroundTint="@color/celeste"></Button>
+
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         Button botonIniciar = (Button) findViewById(R.id.botonIniciar);
 
         // esto son las credenciales que tenia, pero luego cuando se conecte a la base de datos se desapareceran
-        String usuarioAdmin = "usuario@gmail.com";
-        String claveAdmin = "Password1";
+        String usuarioAdmin = "root";
+        String claveAdmin = "0000";
 
         // al tocar el boton iniciar
         botonIniciar.setOnClickListener(new View.OnClickListener() {
