@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
                     // comparara si estos son iguales a las credenciales que por ahora son las de arriba
                     if (usuarioCapturado.equalsIgnoreCase(usuarioAdmin) && claveCapturada.equalsIgnoreCase(claveAdmin)){
                         // Si son iguales, aunque no considera mayusculas de minusculas, envia al menu provicional y elimina esta activity de iniciar sesion
-                        startActivity(new Intent(MainActivity.this,MenuProvicional.class));
-                        finish();
+                        startActivity(new Intent(MainActivity.this,WelcomeSplashActivity.class));
+                        finish();  // termina MainActivity para que no se pueda regresar aquí
                     }else {
                         // si no coinciden le dice al usuario que las credenciales son invalidas
                         Toast.makeText(MainActivity.this, "Credenciales Invalidas", Toast.LENGTH_SHORT).show();
