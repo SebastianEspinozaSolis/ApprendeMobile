@@ -6,17 +6,102 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuAlumno">
+    tools:context=".MenuAlumno"
+    android:orientation="vertical">
 
-    <RelativeLayout
+    <!-- Título -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido usuario_alumno \n\ninfo relevante al alumno"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            />
+
+
+    </LinearLayout>
+
+    <!-- Botones Pomodoro y otras técnicas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="notas"
+            android:layout_marginStart="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asistencia"
+            android:layout_marginStart="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="calendario"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <!-- Título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="técnicas y herramientas\nde estudio"
+            android:textSize="30dp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <!-- Botones Pomodoro y otras técnicas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <!-- Botones Pomodoro -->
         <Button
             android:id="@+id/botonPomodoro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:text="Pomodoro"
-            android:textSize="50sp"></Button>
-    </RelativeLayout>
+            android:backgroundTint="@color/celeste"
+            android:textSize="30sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ver otras técnicas"
+            android:textSize="25sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+
+
+
+
+
+
 </LinearLayout>
