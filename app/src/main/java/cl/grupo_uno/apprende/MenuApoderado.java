@@ -1,6 +1,7 @@
 package cl.grupo_uno.apprende;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,27 +14,25 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MenuApoderado extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_menu_apoderado);
 
-        Button botonPupilo = (Button) findViewById(R.id.botonVerPupilo);
-        Button botonVerAviso = (Button) findViewById(R.id.botonVerAvisos);
+        // Referencia al botón ChileGov
+        Button botonChileGov = findViewById(R.id.botonChileGov);
 
-        botonPupilo.setOnClickListener(new View.OnClickListener() {
+        // Configurar el evento de clic en el botón
+        botonChileGov.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MenuApoderado.this,VerPupilos.class));
+                // Intent para abrir el navegador con la URL de Pomofocus
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://convivenciaparaciudadania.mineduc.cl/wp-content/uploads/2021/11/escuelas-familias-COMPLETO.pdf"));
+                startActivity(intent);
             }
+
         });
 
-        botonVerAviso.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MenuApoderado.this,VerAvisos.class));
-            }
-        });
     }
 }
