@@ -9,6 +9,24 @@
     tools:context=".MenuProvicional"
     android:orientation="vertical">
 
+    <!-- texo y propósito -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-> Este es un menu provicional \n->mientras los usuarios y permisos son desarrollados \n \n==> cada botón representa un tipo de usuario "
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
     <!-- la logica esta la seguiran el resto de menus y funciones aun no creadas, a excepcion de splash y main activity-->
     <!-- boton para enviar al menu de apoderado-->
     <LinearLayout
