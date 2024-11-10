@@ -30,6 +30,20 @@ public class MenuAlumno extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://pomofocus.io/"));
                 startActivity(intent);
             }
+
+        });
+        // Referencia al botón
+        Button botonOtrasTecnicas = findViewById(R.id.botonOtrasTecnicas);
+
+        // Configurar el evento de clic en el botón
+        botonOtrasTecnicas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Intent para abrir el navegador con la URL de Pomofocus
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://ayuda.inacaponline.cl/hc/es-419/articles/28848731101460-M%C3%A9todos-de-estudio-efectivos"));
+                startActivity(intent);
+            }
+
         });
     }
 }
