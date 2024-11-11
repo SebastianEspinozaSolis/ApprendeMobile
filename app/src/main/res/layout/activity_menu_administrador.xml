@@ -8,61 +8,108 @@
     android:layout_height="match_parent"
     tools:context=".MenuAdministrador"
     android:orientation="vertical">
+    <!-- Título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido usuario_adm \n\nopciones de administrador"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            />
+    </LinearLayout>
 
+
+
+    <!-- boton adm usuarios -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/botonCrearUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="editar usuarios"
+                android:textSize="30sp"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/celeste"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+            </Button>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/botonAviso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="enviar avisos"
+                android:textSize="30sp"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/celeste"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+            </Button>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="otro menu para decir otras cosas"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            />
+    </LinearLayout>
+
+    <!-- boton datos alumnos -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
             <Button
                 android:id="@+id/botonIngresarDatos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ingresar datos de alumnos"
-                android:textSize="40sp"
+                android:textSize="30sp"
                 android:layout_centerInParent="true"
                 android:backgroundTint="@color/celeste">
             </Button>
         </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Button
-                android:id="@+id/botonAviso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Avisos"
-                android:textSize="50sp"
-                android:layout_centerInParent="true"
-                android:backgroundTint="@color/celeste">
-            </Button>
-        </RelativeLayout>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Button
-                android:id="@+id/botonCrearUsuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Crear nuevos usuarios"
-                android:textSize="40sp"
-                android:layout_centerInParent="true"
-                android:backgroundTint="@color/celeste">
-            </Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soporte técnico App"
+            android:layout_centerInParent="true"
+            android:textSize="30sp"
+
+            ></Button>
         </RelativeLayout>
     </LinearLayout>
 
