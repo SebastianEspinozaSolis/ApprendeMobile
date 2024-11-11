@@ -44,10 +44,12 @@
             android:backgroundTint="@color/celeste_edit"
             android:layout_marginStart="10dp"/>
         <Button
+            android:id="@+id/botonAsistencia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="boton"
-            android:layout_marginStart="10dp"/>
+            android:text="Asistencia"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/celeste_edit"/>
         <Button
             android:id="@+id/botonContacto"
             android:layout_width="wrap_content"

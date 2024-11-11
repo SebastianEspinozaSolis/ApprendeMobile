@@ -13,7 +13,11 @@ public class MenuApoderado extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_apoderado);  // Asegúrate de que este es el layout correcto
+
+        // Referencia al botón Notas
         Button botonNotas = findViewById(R.id.botonNotas);
+
+        // configuracion el evento de clic en el botón
         botonNotas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -21,18 +25,17 @@ public class MenuApoderado extends AppCompatActivity {
             }
         });
 
-        // Referencia al botón ChileGov
-        Button botonChileGov = findViewById(R.id.botonChileGov);
+        // Referencia al botón Asistencia
+        Button botonAsistencia = findViewById(R.id.botonAsistencia);
 
-        // Configurar el evento de clic en el botón
-        botonChileGov.setOnClickListener(new View.OnClickListener() {
+        // Configuración del evento de clic en el botón Asistencia
+        botonAsistencia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Intent para abrir el navegador con la URL del documento
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://convivenciaparaciudadania.mineduc.cl/wp-content/uploads/2021/11/escuelas-familias-COMPLETO.pdf"));
-                startActivity(intent);
+                startActivity(new Intent(MenuApoderado.this, Asistencia.class));
             }
         });
+
 
         // Referencia al botón de contacto
         Button botonContacto = findViewById(R.id.botonContacto);
@@ -47,6 +50,19 @@ public class MenuApoderado extends AppCompatActivity {
                 // Intent para iniciar la aplicación de teléfono con el número marcado
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse(phoneNumber));
+                startActivity(intent);
+            }
+        });
+
+        // Referencia al botón ChileGov
+        Button botonChileGov = findViewById(R.id.botonChileGov);
+
+        // Configurar el evento de clic en el botón
+        botonChileGov.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Intent para abrir el navegador con la URL del documento
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://convivenciaparaciudadania.mineduc.cl/wp-content/uploads/2021/11/escuelas-familias-COMPLETO.pdf"));
                 startActivity(intent);
             }
         });
