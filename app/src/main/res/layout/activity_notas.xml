@@ -1,10 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    tools:context=".Notas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notas">
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Título: Notas usuario_alumno -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/textViewNotasUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notas: usuario_alumno"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+    <!-- Lista de asignaturas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp">
+
+        <!-- Lista de asignaturas -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewAsignaturas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asignaturas"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Asignaturas -->
+            <TextView
+                android:id="@+id/asignaturaMatematicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Matemáticas"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="verNotas"/>
+
+            <TextView
+                android:id="@+id/asignaturaLenguaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lenguaje"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="verNotas"/>
+
+            <TextView
+                android:id="@+id/asignaturaCiencias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ciencias"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="verNotas"/>
+
+            <TextView
+                android:id="@+id/asignaturaHistoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Historia"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="verNotas"/>
+
+            <TextView
+                android:id="@+id/asignaturaIngles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inglés"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="verNotas"/>
+
+            <TextView
+                android:id="@+id/asignaturaArte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Arte"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="verNotas"/>
+
+            <TextView
+                android:id="@+id/asignaturaMusica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Música"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="verNotas"/>
+
+            <TextView
+                android:id="@+id/asignaturaEducacionFisica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Educación Física"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="verNotas"/>
+
+            <TextView
+                android:id="@+id/asignaturaTecnologia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tecnología"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="verNotas"/>
+        </LinearLayout>
+
+        <!-- Promedio de las asignaturas -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="16dp">
+
+            <TextView
+                android:id="@+id/textViewPromedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Promedio"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Promedio de las asignaturas -->
+            <TextView
+                android:id="@+id/promedioMatematicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promedio Matemáticas: 6.5"
+                android:textSize="18sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/promedioLenguaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promedio Lenguaje: 6.8"
+                android:textSize="18sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/promedioCiencias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promedio Ciencias: 7.0"
+                android:textSize="18sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/promedioHistoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promedio Historia: 5.8"
+                android:textSize="18sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/promedioIngles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promedio Inglés: 6.3"
+                android:textSize="18sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/promedioArte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promedio Arte: 6.0"
+                android:textSize="18sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/promedioMusica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Promedio Música: 7.0"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/promedioEducacionFisica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promedio Educación Física: 6.2"
+                android:textSize="18sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/promedioTecnologia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promedio Tecnología: 6.4"
+                android:textSize="18sp"
+                android:padding="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

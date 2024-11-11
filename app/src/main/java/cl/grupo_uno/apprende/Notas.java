@@ -1,5 +1,6 @@
 package cl.grupo_uno.apprende;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
