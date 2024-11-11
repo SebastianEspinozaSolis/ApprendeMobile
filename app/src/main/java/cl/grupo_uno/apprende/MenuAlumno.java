@@ -19,6 +19,35 @@ public class MenuAlumno extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_alumno);
 
+        // Referencia al botón Asistencia
+        Button botonAsistencia = findViewById(R.id.botonAsistencia);
+
+        // Configuración del evento de clic en el botón Asistencia
+        botonAsistencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuAlumno.this, Asistencia.class));
+            }
+        });
+
+
+        // Referencia al botón de contacto
+        Button botonContacto = findViewById(R.id.botonContacto);
+
+        // Configurar el evento de clic en el botón de contacto
+        botonContacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Número de teléfono que deseas marcar
+                String phoneNumber = "tel: +56422831800";
+
+                // Intent para iniciar la aplicación de teléfono con el número marcado
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(phoneNumber));
+                startActivity(intent);
+            }
+        });
+
         // Referencia al botón
         Button botonPomodoro = findViewById(R.id.botonPomodoro);
 
@@ -46,21 +75,6 @@ public class MenuAlumno extends AppCompatActivity {
 
         });
 
-        // Referencia al botón de contacto
-        Button botonContacto = findViewById(R.id.botonContacto);
 
-        // Configurar el evento de clic en el botón de contacto
-        botonContacto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Número de teléfono que deseas marcar
-                String phoneNumber = "tel: +56422831800";
-
-                // Intent para iniciar la aplicación de teléfono con el número marcado
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse(phoneNumber));
-                startActivity(intent);
-            }
-        });
     }
 }
