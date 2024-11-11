@@ -45,5 +45,22 @@ public class MenuAlumno extends AppCompatActivity {
             }
 
         });
+
+        // Referencia al botón de contacto
+        Button botonContacto = findViewById(R.id.botonContacto);
+
+        // Configurar el evento de clic en el botón de contacto
+        botonContacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Número de teléfono que deseas marcar
+                String phoneNumber = "tel: +569422831800";
+
+                // Intent para iniciar la aplicación de teléfono con el número marcado
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(phoneNumber));
+                startActivity(intent);
+            }
+        });
     }
 }
